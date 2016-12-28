@@ -1,0 +1,21 @@
+sudo: false
+language: python
+python:
+  - "2.6"
+  - "2.7"
+# PyPy versions
+# - "pypy"
+# - "pypy"  # PyPy2 2.5.0
+# - "pypy3" # Pypy3 2.4.0
+# - "pypy-5.3.1"
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+
+# command to run tests
+script: pytest
+
+addons:
+  code_climate:
+    repo_token: cb27e051beab6162957ce7cc0bee86118cb40d355de3ab62e211e25e82954021
