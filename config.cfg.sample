@@ -1,8 +1,9 @@
-[smtp]
-host='smtpHost'
-username='smtpUsername'
-password='smtpPassword'
-port=465
-
 [default]
-keyword='defautlKeyword'
+targets_file=targets.data
+keyword=defautlKeyword
+
+[smtp]
+host=smtpHost
+username=smtpUsername
+password=smtpPassword
+port=465
