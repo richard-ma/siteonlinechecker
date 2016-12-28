@@ -1,12 +1,11 @@
 import requests
-import re
 
 from loader import config, data
 
 class Checker(object):
 
     def __init__(self):
-        pass
+        self.failed_cases = list()
 
     def check(self, target):
         try:
@@ -18,3 +17,10 @@ class Checker(object):
             return False
         else:
             return True
+
+    def checkCases(self, data):
+        for target in data:
+            if self.check(target) == False:
+                self.failed_cases.append(target)
+
+        return self.failed_cases
