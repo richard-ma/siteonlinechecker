@@ -1,0 +1,8 @@
+[smtp]
+host='smtpHost'
+username='smtpUsername'
+password='smtpPassword'
+port=465
+
+[default]
+keyword='defautlKeyword'
