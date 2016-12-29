@@ -1,4 +1,5 @@
 [default]
+admin_email=admin@email.com
 targets_file=targets.data
 keyword=defautlKeyword
 

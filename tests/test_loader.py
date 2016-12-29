@@ -7,8 +7,10 @@ def test_load_config():
 
     # default section options
     assert config.has_section('default')
+    assert config.has_option('default', 'admin_email')
     assert config.has_option('default', 'targets_file')
     assert config.has_option('default', 'keyword')
+    assert not(config.get('default', 'admin_email') is None)
     assert not(config.get('default', 'targets_file') is None)
     assert not(config.get('default', 'keyword') is None)
 
