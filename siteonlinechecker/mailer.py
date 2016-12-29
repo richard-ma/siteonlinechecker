@@ -11,7 +11,7 @@ class Mailer(object):
     def send(self, subject, message,
             fromAddress = config.get('smtp', 'username'),
             toAddress = config.get('default', 'admin_email')):
-        msg = MIMEText(message, _subtype='html')
+        msg = MIMEText(message, _subtype='plain')
         msg['Subject'] = subject
         msg['From'] = fromAddress
         msg['To'] = toAddress
@@ -23,12 +23,12 @@ class Mailer(object):
             self.mailer.login(
                 config.get('smtp', 'username'),
                 config.get('smtp', 'password'))
-            print 'login'
+            #print 'login'
 
             self.mailer.sendmail(fromAddress, toAddress, msg.as_string())
-            print 'send'
+            #print 'send'
             self.mailer.quit()
-            print 'quit'
+            #print 'quit'
             return True
         except Exception, e:
             print str(e)

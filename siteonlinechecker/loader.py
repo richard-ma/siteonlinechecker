@@ -1,5 +1,8 @@
 import ConfigParser
 
+def remove_newline(e):
+    return e.strip()
+
 class Config(object):
 
     def __init__(self):
@@ -15,7 +18,7 @@ class Data(list):
         super(Data, self).__init__()
 
         with open(dataFilename) as f:
-            self.extend(f.readlines())
+            self.extend(list(map(remove_newline, f.readlines())))
 
 # global config object
 config = Config().load('config.cfg')
