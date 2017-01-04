@@ -7,11 +7,19 @@ echo "-------------------------------------------"
 echo "正在安装依赖..."
 pip install -r requirements.txt
 
-echo "正在创建配置文件config.cfg..."
-cp config.cfg.sample config.cfg
+if [ ! -f "config.cfg" ]; then
+    echo "正在创建配置文件config.cfg..."
+    cp config.cfg.sample config.cfg
+else
+    echo "[skip]配置文件已存在，不再创建"
+fi
 
-echo "正在创建检测数据文件targets.data..."
-touch targets.data
+if [ ! -f "targets.data" ]; then
+    echo "正在创建检测数据文件targets.data..."
+    touch targets.data
+else
+    echo "[skip]数据文件已存在，不再创建"
+fi
 
 echo "-------------------------------------------"
 echo "                开始测试                   "
