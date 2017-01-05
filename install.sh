@@ -5,6 +5,7 @@ echo "                开始安装                   "
 echo "-------------------------------------------"
 
 echo "正在安装依赖..."
+pip install pip --upgrade
 pip install -r requirements.txt
 
 if [ ! -f "config.cfg" ]; then
@@ -32,5 +33,7 @@ echo "                配置说明                   "
 echo "-------------------------------------------"
 
 echo "1. 请先填写config.cfg文件中的相关配置参数。"
-echo "2. 需要监测的网站地址每行一个，写入targets.data文件中，例如："
-echo "http://www.baidu.com"
+echo "2. 需要监测的网站地址每行一个，写入targets.data文件中，例如：http://www.baidu.com"
+echo "3. 启动监控 ./siteonlinechecker.sh start"
+echo "4. 停止监控 ./siteonlinechecker.sh stop"
+echo "详细说明请查阅README.md"
