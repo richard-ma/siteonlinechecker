@@ -22,7 +22,7 @@ if __name__ == '__main__':
     log.addHandler(h)
 
     s = BlockingScheduler()
-    s.add_job(run, 'interval', seconds=5)
+    s.add_job(run, 'interval', minutes=config.get('default', 'interval'))
 
     try:
         s.start()
