@@ -5,7 +5,7 @@ do_start() {
 }
 
 do_stop() {
-    echo 'stop'
+    ps aux | grep scheduler.py | grep -v grep | awk '{print $2;}' | xargs kill
 }
 
 case "$1" in
