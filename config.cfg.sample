@@ -3,7 +3,7 @@ admin_email=admin@email.com ; 接收报警邮件的邮箱
 interval=10                 ; 监控扫描时间间隔，单位为分钟
 
 targets_file=targets.data   ; 数据文件名称（不建议修改）
-keyword=defautlKeyword      ; 监控网页特征字符串（不建议修改）
+keyword=defautlKeyword      ; 监控网页特征字符串
 
 [smtp]
 host=smtpHost               ; SMTP服务器地址
