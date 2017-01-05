@@ -1,10 +1,12 @@
 [default]
-admin_email=admin@email.com
-targets_file=targets.data
-keyword=defautlKeyword
+admin_email=admin@email.com ; 接收报警邮件的邮箱
+interval=10                 ; 监控扫描时间间隔，单位为分钟
+
+targets_file=targets.data   ; 数据文件名称（不建议修改）
+keyword=defautlKeyword      ; 监控网页特征字符串（不建议修改）
 
 [smtp]
-host=smtpHost
-username=smtpUsername
-password=smtpPassword
-port=465
+host=smtpHost               ; SMTP服务器地址
+username=smtpUsername       ; SMTP服务器登陆用户名
+password=smtpPassword       ; SMTP服务器登陆密码
+port=465                    ; SMTP服务器发送邮件端口
